@@ -1,0 +1,126 @@
+
+.logo{
+    max-width: 100px;
+}
+.banner img{
+    max-width: 700px;
+}
+.nav-bar a.burger {
+    display:none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+.nav-bar #page-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#page-links a{
+    width: 50%;
+    padding-top: 0px;
+    padding-left: 0px;
+    transition: background-color 1s;
+}
+#page-links a:hover{
+    box-shadow: 0 8px 16px 0 rgba(167, 163, 163, 0.19), 0 6px 20px 0 rgba(167, 163, 163, 0.19);
+    background-color: rgba(167, 163, 163, 0.19);
+}
+.info{
+    align-items: center;
+    justify-content: center;
+}
+.exchange-display{
+    width: 80%;
+    min-height: 200px;
+    transition: background-color 1s;
+}
+.exchange-image{
+  max-width: 100px;
+}
+.balance{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form{
+    width: 100%;
+}
+.form-items{
+    padding: 0px;
+    width: 100%;
+}
+.centre{
+    width: 100%;
+    padding:20px;
+}
+.flex-buttons{
+    padding-top: 20px;
+}
+.exchange-display:hover{
+    box-shadow: 0 8px 16px 0 rgba(167, 163, 163, 0.19), 0 6px 20px 0 rgba(167, 163, 163, 0.19);
+    background-color: rgba(167, 163, 163, 0.19);
+}
+a .btn-width{
+    width: 50%;
+}
+.account-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: flex-end;
+}
+/* .info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+} */
+.exchange-rates{
+    display:flex;
+    flex-direction: column;
+    flex: 80%;
+}
+.side-bar{
+    display: flex;
+    flex:20%;
+    flex-direction: column;
+    align-items:flex-start ;
+    border-right:1px solid rgba(167, 163, 163, 0.19) ;
+
+    flex-shrink: 0;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    height: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+section{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+}
+
+.info{
+    font-size: 16px;
+    display: flex;
+    flex:85%;
+    flex-direction: column;
+}
+.centre input[type=submit]{
+    width: 40%;
+}
