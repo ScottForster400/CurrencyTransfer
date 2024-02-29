@@ -11,7 +11,7 @@
             while($account = $results -> fetch_object()){
                 {
                     $GBPamount=$amount/$account->exchange_rate;
-                    $accountId=$account->currency_account_id;
+                    $accountFromId=$account->currency_account_id;
                     $stmnt=$mysqli->prepare("UPDATE `currency_accounts` SET balance = balance-{$amount} WHERE currency_account_id = ?");
                     $stmnt->bind_param('s',$accountId);
                     $stmnt->execute();
@@ -25,12 +25,14 @@
             while($account = $results -> fetch_object()){
                 {
                     $addAmount=$GBPamount*$account->exchange_rate;
-                    $accountId=$account->currency_account_id;
+                    $accountToId=$account->currency_account_id;
                     $stmnt=$mysqli->prepare("UPDATE `currency_accounts` SET balance = balance+{$addAmount} WHERE currency_account_id = ?");
                     $stmnt->bind_param('s',$accountId);
                     $stmnt->execute();
-                    header('Location:account-home.php?user='.$user);
                     }
                 }
             }
+        $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`, `transfer_amount`,'account_from',`account_to`, `user_id`) VALUES ('CURRENT_DATE', '$amount','$accountToId','$accountFromId', '$user');");
+        $stmnt->execute();
+        header('Location:account-home.php?user='.$user);
     ?>

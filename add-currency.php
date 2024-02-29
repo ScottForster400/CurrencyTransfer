@@ -12,7 +12,7 @@
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome || CTA</title>
+    <title>Add Currency || CTA</title>
     <!-- Load an icon library to show icon for showing password -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->

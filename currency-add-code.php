@@ -15,11 +15,13 @@
                     $stmnt=$mysqli->prepare("UPDATE `currency_accounts` SET balance = balance+{$amount} WHERE currency_account_id = ?");
                     $stmnt->bind_param('s',$accountId);
                     $stmnt->execute();
-                    header('Location:account-home.php?user='.$user);
                     }
                 }
             }
         else{
             header('Location:add-currency.php?user='.$user);
         }
+        $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`, `transfer_amount`, `account_to`, `user_id`) VALUES ('CURRENT_DATE', '$amount', '$accountId', '$user');");
+        $stmnt->execute();
+        header('Location:account-home.php?user='.$user);
     ?>
