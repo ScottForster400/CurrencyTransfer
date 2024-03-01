@@ -21,8 +21,7 @@
         <main>
             <div class="info">
                 <h1>Transfer Limit</h1>
-                <h3>Current Limit:£1,000,000</h3>
-                <form  method="GET">
+                <h3 id="transfer-limit">Current Limit:£1,000,000</h3>
                     <div id=contact-frm>
                         <div class="form-items">
                             <div class="centre">
@@ -31,10 +30,9 @@
                             </div>
                         </div>
                         <div class="centre">
-                            <input type="submit" value="Set Limit">
+                            <input type="submit" value="Set Limit" onclick="setLimit()">
                         </div>   
                     </div>
-                </form>
             </div>
         </main>
     </div>

@@ -55,7 +55,9 @@
                                 <div class="img-container">
                                    <img src="" alt="Evidence of funds">
                                 </div>
-                                <a href="add-currency.php"><button class="btn-width">Unlock</button></a>
+                                <?php
+                                    echo("<a href=\"unlock-account.php?user={$user}\"><button class=\"btn-width\">Unlock</button></a>");
+                                ?>
                             </div>
                             <div class="right-side">
                                 <h2>Transfer History</h2>

@@ -70,6 +70,7 @@
                                 <?php
                                     echo("<input type=\"hidden\" name=\"user\" id=\"user\" value=\"{$user}\">")
                                 ?>
+                                <input type="hidden" name="limit" id="limit" value="">
                             </div>
                         </div>
                         <div class="centre">

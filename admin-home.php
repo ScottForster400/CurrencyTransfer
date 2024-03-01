@@ -36,7 +36,7 @@
                                     echo("</div>");
                                     echo("<h2>{$account->first_name} {$account->surname}</h2>");
                                     echo("<div class=\"flag-detail\">");
-                                    $stmnt=$mysqli->prepare("SELECT * FROM transfers WHERE user_id ={$account->user_id} AND transfer_date< CURRENT_DATE ORDER BY transfer_date DESC LIMIT 1;");
+                                    $stmnt=$mysqli->prepare("SELECT * FROM transfers WHERE user_id ={$account->user_id} AND transfer_date<= CURRENT_DATE ORDER BY transfer_date DESC LIMIT 1;");
                                     $stmnt->execute();
                                     $resas=$stmnt->get_result();
                                     if($resas->num_rows>0){
@@ -57,7 +57,7 @@
                                     echo("</div>");
                                     echo("<div class=\"flex-buttons\">");
                                     echo("<a href=\"account-review.php?user={$account->user_id} & flag_date={$trans_date}\"><button class=\"btn-width\">Review</button></a>");
-                                    echo("<a href=><button class=\"btn-width\">Unlock</button></a>");
+                                    echo("<a href=\"unlock-account.php?user={$account->user_id}\"><button class=\"btn-width\">Unlock</button></a>");
                                     echo("</div>");
                                     echo("</div>");
                                 }

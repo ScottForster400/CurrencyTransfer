@@ -6,7 +6,6 @@
             <div id="page-links">
                 <a href="login.php">Login</a>
                 <a href="Register.php">Register</a>
-                <a href="admin-home.php">Admin</a>
             </div>
                 <a href="javascript:void(0)" class="burger" onclick="myFunction()">
                     <i class="fa fa-bars"></i>

@@ -1,13 +1,14 @@
 // Used https://www.w3schools.com/howto/howto_js_mobile_navbar.asp to make a burger menu
-var transferLimit=100;
-function myFunction(){
-    var x = document.getElementById("page-links");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-}
+var transferLimit=500000;
+
+(function myFunction(){
+    // var translim = document.getElementById("transfer-limit");
+    // console.dir(translim)
+    // document.translim.innerHTML="bruh"
+    document.getElementById("limit").value=transferLimit;
+    var amount = document.getElementById("amount")
+    $(amount).attr('max',transferLimit)
+})();
 function showPword(){
   console.dir("bruh")
   var pword = document.getElementById("pword")
@@ -19,6 +20,12 @@ function showPword(){
     $(pword).attr('type','password')
   }
   
+}
+function setLimit(){
+  var amount = document.getElementById("amount")
+  console.dir(document.getElementById("amount").value)
+  transferLimit=document.getElementById("amount").value
+  myFunction();
 }
 // function amountCheck(){
 //   alert("bruh")
