@@ -3,6 +3,7 @@
 <head>
     <?php
         $user =$_GET["user"]?? null;
+        $data=$_GET["data"]?? null;
         include("includes/dbconfing-inc.php");
         $user =$_GET["user"]?? null;
         $stmnt=$mysqli->prepare("SELECT currency_name FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = ?;");
@@ -71,6 +72,11 @@
                                     echo("<input type=\"hidden\" name=\"user\" id=\"user\" value=\"{$user}\">")
                                 ?>
                                 <input type="hidden" name="limit" id="limit" value="">
+                                <?php
+                                    if($data==1){
+                                        echo("<p>Balance too low</p>");
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="centre">
@@ -80,6 +86,9 @@
                 </form>
             </div>
         </main>
+        <?php
+            include("includes/footer-inc.php")
+        ?>
     </div>
 </body>
 </html>

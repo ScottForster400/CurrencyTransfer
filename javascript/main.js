@@ -2,15 +2,24 @@
 var transferLimit=500000;
 
 (function myFunction(){
-    // var translim = document.getElementById("transfer-limit");
-    // console.dir(translim)
-    // document.translim.innerHTML="bruh"
     document.getElementById("limit").value=transferLimit;
     var amount = document.getElementById("amount")
     $(amount).attr('max',transferLimit)
 })();
+//used https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView to work scrollintoview
+function exchnageScroll(element) {
+  var selectedElement = element.innerHTML;
+  document.getElementById(selectedElement).scrollIntoView({behavior:"smooth"});
+}
+function burgerMenu() {
+  var x = document.getElementById("page-links");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+};
 function showPword(){
-  console.dir("bruh")
   var pword = document.getElementById("pword")
   var type = $(pword).attr('type');
   if(type==="password"){
@@ -20,13 +29,7 @@ function showPword(){
     $(pword).attr('type','password')
   }
   
-}
-function setLimit(){
-  var amount = document.getElementById("amount")
-  console.dir(document.getElementById("amount").value)
-  transferLimit=document.getElementById("amount").value
-  myFunction();
-}
+};
 // function amountCheck(){
 //   alert("bruh")
 //   var input=document.getElementById("amount")

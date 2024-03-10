@@ -82,6 +82,7 @@ body{
     flex-direction: column;
     padding: 20px;
     height: auto;
+    min-height: 600px;
 }
 .exchange-display{
 
@@ -275,4 +276,13 @@ main{
 }
 .float-right{
     float: right;
+}
+footer{
+    margin-top: 50px;
+    font-size: 12px;
+    box-shadow: 8px 8px 16px 16px rgba(118, 117, 117, 0.19), 0 6px 20px 0 rgba(118, 117, 117, 0.19);
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

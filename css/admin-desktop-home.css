@@ -134,7 +134,7 @@ section{
     flex:25%
 }
 .user-info{
-    flex: 75%;
+    /* flex: 75%; */
 }
 .image-container{
     flex: 25%;

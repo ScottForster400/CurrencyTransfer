@@ -13,7 +13,7 @@
                     header('Location:admin-home.php');
                 }
                 elseif($account->suspicious_account==1){
-                    echo"<p>suspicious</p>";
+                    header('Location:evidence-funds.php?user='.$account->user_id);
                 }
                 else{
                     header('Location:account-home.php?user='.$account->user_id);

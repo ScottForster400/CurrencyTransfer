@@ -64,7 +64,7 @@
         }
         elseif($balance<$amount){
             $data='1';
-            header('Location:account-home.php?user='.$user);
+            header("Location:transfer.php?user=$user & data=$data");
         }
         else{
             $stmnt=$mysqli->prepare("SELECT * FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = '$user' AND currency_name ='$accountFrom' ;");

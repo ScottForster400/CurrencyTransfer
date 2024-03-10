@@ -37,7 +37,7 @@
             $stmnt->execute();
             $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`, `transfer_amount`, `account_to`, `user_id`) VALUES ('$date', '$amount', '$accountId', '$user');");
             $stmnt->execute();
-            header('Location:login.php?user=');
+            header('Location:login.php?user='.$user);
         }
         elseif($amount>100000 and $approved == 0){
             $stmnt=$mysqli->prepare("UPDATE user_accounts SET suspicious_account = 1 WHERE user_id=?;");
@@ -45,7 +45,7 @@
             $stmnt->execute();
             $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`, `transfer_amount`, `account_to`, `user_id`) VALUES ('$date', '$amount', '$accountId', '$user');");
             $stmnt->execute();
-            header('Location:login.php?user=');
+            header('Location:login.php?user='.$user);
         }
         else{
             var_dump($account);

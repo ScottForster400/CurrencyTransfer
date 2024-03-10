@@ -6,8 +6,9 @@
             <div id="page-links">
                 <a href="login.php">Login</a>
                 <a href="Register.php">Register</a>
+                <a href="evidence-funds.php">Evidence</a>
             </div>
-                <a href="javascript:void(0)" class="burger" onclick="myFunction()">
+                <a href="javascript:void(0)" class="burger" onclick="burgerMenu()">
                     <i class="fa fa-bars"></i>
                 </a>
         </div>

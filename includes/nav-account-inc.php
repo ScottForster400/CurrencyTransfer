@@ -13,7 +13,7 @@
                     echo("<a href=\"index.php\">Log Out</a>");
                 ?>
             </div>
-                <a href="javascript:void(0)" class="burger" onclick="myFunction()">
+                <a href="javascript:void(0)" class="burger" onclick="burgerMenu()">
                     <i class="fa fa-bars"></i>
                 </a>
         </div>

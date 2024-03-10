@@ -5,7 +5,20 @@
         include("includes/dbconfing-inc.php");
         $user =$_GET["user"]?? null;
         $flag_date=$_GET["flag_date"]??null;
-        $stmnt=$mysqli->prepare("SELECT * FROM user_accounts WHERE user_id=$user");
+        $stmnt=$mysqli->prepare("SELECT * FROM evidence_of_funds WHERE user_id=$user");
+        $stmnt->execute();
+        $results=$stmnt->get_result();
+        if($results->num_rows>0){
+            while($evidenceOf = $results -> fetch_object()){
+                {
+                    $evidence=$evidenceOf->evidence_img_path??null;
+                }
+            }
+        }
+        else{
+            $evidence=null;
+        }
+        $stmnt=$mysqli->prepare("SELECT * FROM user_accounts WHERE user_accounts.user_id=$user");
         $stmnt->execute();
         $results=$stmnt->get_result();
     ?>
@@ -53,7 +66,12 @@
                                     <p>Account status:locked</p> -->
                                 </div>
                                 <div class="img-container">
-                                   <img src="" alt="Evidence of funds">
+                                    <?php
+                                        
+                                            echo("<img src=\"$evidence\" alt=\"Evidence of funds\">");
+                                        
+                                    ?>
+                                   
                                 </div>
                                 <?php
                                     echo("<a href=\"unlock-account.php?user={$user}\"><button class=\"btn-width\">Unlock</button></a>");

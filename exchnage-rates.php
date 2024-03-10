@@ -30,7 +30,7 @@
                         if($results->num_rows>0){
                             while($currency = $results -> fetch_object()){
                                 {
-                                    echo("<p>{$currency->currency_name}</p>");
+                                    echo("<p onclick=\"exchnageScroll(this)\">{$currency->currency_name}</p>");
                                 }
                             }
                         }
@@ -45,7 +45,7 @@
                         if($results->num_rows>0){
                             while($currency = $results -> fetch_object()){
                                 {
-                                    echo("<div class=\"exchange-display\">");
+                                    echo("<div class=\"exchange-display\" id=\"$currency->currency_name\">");
                                     echo("<div class=\"exchange-image\">");
                                     echo("<div class=\"img-container\">");
                                     echo("<img src=\"imgs/{$currency->currency_image}\" alt=\"$currency->currency_name\">");
@@ -70,8 +70,11 @@
                         }
                     ?>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        <?php
+            include("includes/footer-inc.php")
+        ?>
     </div>
 </body>
 </html>
