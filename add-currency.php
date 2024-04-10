@@ -54,7 +54,7 @@
                                 <input type="text" name="cardNum" id="cardNum"required>
                                 <label for="cardName">Card Holder name:</label>
                                 <input type="text" name="cardName" id="cradName"required>
-                                <label for="amount">Amount:</label>
+                                <label for="amount">Amount(£):</label>
                                 <input type="number" name="amount" id="amount" required min='5' max='1000000'>
                                 <label for="cvc">CVC:</label>
                                 <input type="number" name="cvc" id="cvc" required>

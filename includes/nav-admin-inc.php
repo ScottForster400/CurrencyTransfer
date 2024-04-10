@@ -4,7 +4,7 @@
                 <a href="admin-home.php"><img src="imgs/logo-white.png" alt="logo"></a>
             </div>
             <div id="page-links">
-                <a href="transfer-limit.php">Transfer Limit</a>
+                <a href="exchange-update.php">Exchange Update</a>
                 <a href="index.php">Log Out</a>
             </div>
                 <a href="javascript:void(0)" class="burger" onclick="burgerMenu()">

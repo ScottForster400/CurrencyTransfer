@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+         $data=$_GET["data"]??null;
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register || CTA</title>
@@ -41,6 +44,11 @@
                                 <input type="email" name="email" id="email"required>
                                 <label for="dob">Date of Birth:</label>
                                 <input type="date" name="dob" id="dob"required>
+                                <?php
+                                     if($data==1){
+                                        echo("<p>Email has already been used");
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="centre">
