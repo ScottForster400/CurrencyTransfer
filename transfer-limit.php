@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+         $data=$_GET["data"]??null;
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transfer Limit || CTA</title>
@@ -20,19 +23,16 @@
         ?>
         <main>
             <div class="info">
-                <h1>Transfer Limit</h1>
-                <h3 id="transfer-limit">Current Limit:£1,000,000</h3>
-                    <div id=contact-frm>
-                        <div class="form-items">
-                            <div class="centre">
-                                <label for="amount">New Limit:</label>
-                                <input type="number" name="amount" id="amount"required min='5'>
-                            </div>
-                        </div>
-                        <div class="centre">
-                            <input type="submit" value="Set Limit" onclick="setLimit()">
-                        </div>   
-                    </div>
+                <div class="centre">
+                    <a href="api/webscraper-update-rates.php">
+                        <button>Update Exchnage Rates</button>
+                    </a>
+                    <?php  
+                       if($data ==1){
+                            echo "<p>Exchange Rates Succesfully Updated</p>";
+                       }
+                    ?>
+                </div>
             </div>
         </main>
     </div>

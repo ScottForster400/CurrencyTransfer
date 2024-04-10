@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="centre">
-                            <button type="submit" id="addFund">Add Funds</button> 
+                            <button type="submit" id="addAccount">Add Account</button> 
                         </div>   
                     </div>
                 </form>

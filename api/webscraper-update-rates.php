@@ -47,3 +47,5 @@ for ($i = 0; $i < count($tableArray); $i++){
         }
     }
 }
+$data=1;
+header('Location:/CurrencyTransfer/transfer-limit.php?data='.$data);

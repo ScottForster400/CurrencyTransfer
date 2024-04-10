@@ -7,6 +7,7 @@
             </div>
             <div id="page-links">
                 <?php
+                    echo("<a href=\"account-home.php?user={$user}\">Home</a>");
                     echo("<a href=\"account-info.php?user={$user}\">Account</a>");
                     echo("<a href=\"transfer.php?user={$user}\">Transfer</a>");
                     echo("<a href=\"exchnage-rates.php?user={$user}\">Exchange Rates</a>");
