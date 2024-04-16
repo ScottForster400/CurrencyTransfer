@@ -9,11 +9,12 @@
 $crawler = $client->request("GET","https://www.bankofengland.co.uk/boeapps/database/Rates.asp?Travel=NIxAZx&into=GBP");
 
 $tableString = $crawler->filter('table')->text();
+//echo $tableString;
 // $crawler->filterXPath('//tbody')->each(function($node) {
 //     echo $node ->filter("tr > td")->text();
 // });
 $tableArray=explode(' ', $tableString);
-echo count($tableArray);
+//var_dump($tableArray);
 //var_dump($tableArray);
 array_splice($tableArray,0,11);
 //var_dump($tableArray);

@@ -51,19 +51,20 @@
                                 ?>
                                 </select>
                                 <label for="cardNum">Card Number:</label>
-                                <input type="text" name="cardNum" id="cardNum"required>
+                                <input type="text" name="cardNum" id="cardNum"required minlength="16" maxlength="16">
                                 <label for="cardName">Card Holder name:</label>
                                 <input type="text" name="cardName" id="cradName"required>
                                 <label for="amount">Amount(£):</label>
                                 <input type="number" name="amount" id="amount" required min='5' max='1000000'>
                                 <label for="cvc">CVC:</label>
-                                <input type="number" name="cvc" id="cvc" required>
+                                <input type="text" name="cvc" id="cvc" required minlength="3" maxlength="3">
                                 <label for="expiry">Expiry Date:</label>
                                 <input type="month" name="expiry" id="expiry"required>
                                 <!-- this is required in order to send over user id to next form -->
                                 <?php
                                     echo("<input type=\"hidden\" name=\"user\" id=\"user\" value=\"{$user}\">")
                                 ?>
+
                                 <input type="hidden" name="limit" id="limit" value="">
                             </div>
                         </div>

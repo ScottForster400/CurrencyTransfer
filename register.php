@@ -46,7 +46,7 @@
                                 <input type="date" name="dob" id="dob"required>
                                 <?php
                                      if($data==1){
-                                        echo("<p>Email has already been used");
+                                        echo("<p>Email has already been used</p>");
                                     }
                                 ?>
                             </div>

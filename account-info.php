@@ -51,7 +51,10 @@
                                             echo("<input type=\"date\" name=\"dob\" id=\"dob\" value=\"{$account->dob}\"required>");
                                             echo("<input type=\"hidden\" name=\"user\" id=\"user\" value=\"{$user}\">");
                                             if($data ==='true'){
-                                                echo("<p> account successfully updated</p>");
+                                                echo("<p>Account successfully updated</p>");
+                                            }
+                                            elseif($data == 1){
+                                                echo("<p>Email has already been used</p>");
                                             }
                                         }
                                     }

@@ -46,7 +46,7 @@
                                     ?>
                             </div>
                         <div class="centre">
-                            <input type="submit" value="Set Limit" onclick="setLimit()">
+                            <input type="submit" value="Upload" onclick="setLimit()">
                         </div>   
                     </div>
                 </form>

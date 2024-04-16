@@ -4,6 +4,7 @@
                 <a href="admin-home.php"><img src="imgs/logo-white.png" alt="logo"></a>
             </div>
             <div id="page-links">
+                <a href="admin-home.php">Home</a>
                 <a href="exchange-update.php">Exchange Update</a>
                 <a href="index.php">Log Out</a>
             </div>

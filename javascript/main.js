@@ -30,17 +30,3 @@ function showPword(){
   }
   
 };
-// function amountCheck(){
-//   alert("bruh")
-//   var input=document.getElementById("amount")
-//   console.dir(input)
-//   var enteredAmount= input.value;
-//   console.dir(enteredAmount)
-//   console.dir(transferLimit)
-//   if(enteredAmount<transferLimit){
-//     return true
-//   }
-//   else{
-//     return false
-//   }
-// }
