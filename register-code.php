@@ -8,6 +8,9 @@
     $email=$_POST["email"]??null;
     $dob =$_POST["dob"]?? null;
 
+    $hashed_password = password_hash($pword, PASSWORD_DEFAULT);
+
+
     $stmnt=$mysqli->prepare("SELECT * FROM user_accounts WHERE email ='$email'");
     $stmnt->execute();
     $results=$stmnt->get_result();
@@ -17,9 +20,9 @@
     }
     else{
         $stmnt=$mysqli->prepare("INSERT INTO `user_accounts` (`first_name`, `surname`, `pword`, `email`, `mobile_number`, `dob`) VALUES (?,?,?,?,?,?)");
-        $stmnt->bind_param('ssssss',$firstName,$surname,$pword,$email,$phone,$dob);
+        $stmnt->bind_param('ssssss',$firstName,$surname,$hashed_password,$email,$phone,$dob);
         $stmnt->execute();
-        $stmnt=$mysqli->prepare("SELECT user_id FROM user_accounts WHERE email ='$email' AND pword = '$pword'");
+        $stmnt=$mysqli->prepare("SELECT user_id FROM user_accounts WHERE email ='$email'");
         $stmnt->execute();
         $results=$stmnt->get_result();
         if($results->num_rows>0){
