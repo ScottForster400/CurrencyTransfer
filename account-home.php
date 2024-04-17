@@ -45,7 +45,7 @@
                                     echo("<div class=\"exchange-info\">");
                                     echo("<div class=\"balance\">");
                                     echo("<h2>{$account->currency_name}</h2>");
-                                    echo("<p>{$account->currency_symbol}{$account->balance}</p>");
+                                    echo("<p>{$account->currency_symbol} {$account->balance}</p>");
                                     echo("</div>");
                                     echo("<div class=\"flex-buttons\">");
                                     echo("<a href=\"add-currency.php?user={$user}\"><button class=\"btn-width\">Add</button></a>");

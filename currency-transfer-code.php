@@ -99,7 +99,7 @@
                         }
                     }
                 }
-                $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`,`transfer_amount`,`account_from`,`account_to`, `user_id`) VALUES ('$date', '$amount','$accountToId','$accountFromId', '$user');");
+                $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`,`transfer_amount`,`account_from`,`account_to`, `user_id`) VALUES ('$date', '$amount','$accountFromId','$accountToId', '$user');");
                 $stmnt->execute();
                 header('Location:account-home.php?user='.$user);
         }
