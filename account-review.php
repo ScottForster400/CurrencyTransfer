@@ -58,12 +58,6 @@
                                     }
                                 }
                                 ?>
-                                    <!-- <h2>Charlie mulnor</h2>
-                                    <p>Email:Demo@gmail.com</p>
-                                    <p>Phone Num:0437327392</p>
-                                    <p>DOB:06/02/98</p>
-                                    <p>Flag Date:25/02/22</p>
-                                    <p>Account status:locked</p> -->
                                 </div>
                                 <div class="img-container">
                                     <?php

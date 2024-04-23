@@ -31,7 +31,12 @@
                     <div id=contact-frm>
                         <div class="form-items" >
                             <div class="centre">
-                            <!-- Used https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file to find input type file and to chnage what files it accepts-->
+                            <!-- Used to find input type file and to chnage what files it accepts-->
+                            <!-- used to make burger menu nav -->
+                            <!--Websdite:mdn web docs
+                            Name Of Webpage: <input type="file">
+                            Date: 8th January 2024
+                            URL:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
                                 <label for="evidence">Evidence:</label>
                             
                                     <input type="file" name="evidence" id="evidence"required accept="image/jpeg, image/png">

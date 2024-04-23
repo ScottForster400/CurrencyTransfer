@@ -28,9 +28,6 @@
                     }
                 }
             }
-            //var_dump($approved);
-            //var_dump($amount);
-            //var_dump($limit);
         if($amount>= $limit){
             $stmnt=$mysqli->prepare("UPDATE user_accounts SET suspicious_account = 1 WHERE user_id=?;");
             $stmnt->bind_param('s',$user);

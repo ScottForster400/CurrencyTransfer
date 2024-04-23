@@ -22,7 +22,6 @@
             </div>
         
         <div class="info">
-            <!-- <div class="flex-column"> -->
                 <h2>Popular Exchanges</h2>
                 <div class="exchange-display">
                     <div class="exchange-image">
@@ -63,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-            <!-- </div> -->
+
         </div>
         <?php
             include("includes/footer-inc.php")

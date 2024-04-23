@@ -1,6 +1,10 @@
 <?php
     require_once("includes\dbconfing-inc.php");
-    //used https://www.php.net/manual/en/function.header.php to find how to use header function
+    //used to find how to use header function
+    //Websdite:PHP
+    //Name Of Webpage:header
+    //Date: N/A
+    //URL:https://www.php.net/manual/en/function.header.php
     $user =$_POST["user"]?? null;
     $account=$_POST["account"]??null;
     $stmnt=$mysqli->prepare("SELECT exchange_id FROM exchange_rates WHERE currency_name='$account';");
@@ -28,9 +32,4 @@
         header("Location:add-account.php?data=$data & user=$user");
     }
 
-    // $stmnt=$mysqli->prepare("INSERT INTO `user_accounts` (`first_name`, `surname`, `pword`, `email`, `mobile_number`, `dob`) VALUES (?,?,?,?,?,?)");
-    // $stmnt->bind_param('ssssss',$firstName,$surname,$pword,$email,$phone,$dob);
-    // $stmnt->execute();
-    // $results=$stmnt->get_result();
-    // header('Location:login.php');
 ?>

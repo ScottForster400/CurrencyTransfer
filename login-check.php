@@ -1,6 +1,5 @@
 <?php
     require_once("includes\dbconfing-inc.php");
-    //used https://www.php.net/manual/en/function.header.php to find how to use header function
     $email =$_POST["email"]?? null;
     $password=$_POST["pword"]??null;
     $stmnt=$mysqli->prepare("SELECT * FROM user_accounts WHERE email ='$email'");

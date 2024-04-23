@@ -1,6 +1,5 @@
 <?php
     require_once("includes\dbconfing-inc.php");
-    //used https://www.php.net/manual/en/function.header.php to find how to use header function
     $firstName =$_POST["firstName"]?? null;
     $surname=$_POST["surname"]??null;
     $pword=$_POST["pword"]??null;

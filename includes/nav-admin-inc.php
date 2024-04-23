@@ -1,4 +1,8 @@
-<!-- Used https://www.w3schools.com/howto/howto_js_mobile_navbar.asp to make a burger menu -->
+<!-- used to make burger menu nav -->
+<!--Websdite:w3schools
+Name Of Webpage: How TO - Mobile Navigation Menu
+Date:N/A
+URL:https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
 <div class="nav-bar">
             <div class="logo">
                 <a href="admin-home.php"><img src="imgs/logo-white.png" alt="logo"></a>

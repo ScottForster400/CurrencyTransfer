@@ -1,5 +1,9 @@
 <?php
 //used https://www.php.ne;t/manual/en/features.file-upload.post-method.php to help with file upload
+//Websdite:php
+//Name Of Webpage:POST method uploads
+//Date: N/A
+//URL:https://www.php.net/manual/en/features.file-upload.post-method.php
 include("includes/dbconfing-inc.php");
 $user=$_POST["user"]??null;
  $fileDir="imgs/evidence/";
@@ -12,7 +16,6 @@ $user=$_POST["user"]??null;
  $newname=$rename.'.'.$extension;
  $path="imgs/evidence/{$newname}";
  $filename=$_FILES['evidence']['tmp_name'];
- //move_uploaded_file($_FILES["evidence"]["name"], $file."imgs/evidence/test");
  if (move_uploaded_file($filename,$path)) {
     echo "File is valid, and was successfully uploaded.\n";
     $stmnt=$mysqli->prepare("SELECT * FROM evidence_of_funds WHERE user_id=$user;");

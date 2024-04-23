@@ -60,21 +60,6 @@
                                     }
                                 }
                                 ?>
-                                <!-- <label for="firstName">Name:</label>
-                                <input type="text" name="fisrtName" id="firstName"required>
-                                <label for="surname">Surname:</label>
-                                <input type="text" name="surname" id="surname"required>
-                                <div class="pword-container">
-                                    <label for="pword">Password:</label>
-                                    <input type="password" name="pword" id="pword"required>
-                                    <i class="fa-solid fa-eye" id="eye" onclick="showPword()"></i>
-                                </div>
-                                <label for="phone">Phone Number:</label>
-                                <input type="tel" name="phone" id="phone">
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" id="email"required>
-                                <label for="dob">Date of Birth:</label>
-                                <input type="date" name="dob" id="dob"required> -->
                             </div>
                         </div>
                         <div class="centre">

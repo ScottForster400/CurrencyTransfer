@@ -57,8 +57,6 @@
                                     echo("<p>{$currency->exchange_rate}</p>");
                                     echo("</div>");
                                     echo("<div class=\"flex-buttons\">");
-                                    //echo("<a href=\"add-currency.php\"><button class=\"btn-width\">Add</button></a>");
-                                    //echo("<a href=\"\"><button class=\"btn-width\">Delete</button></a>");
                                     echo("</div>");
                                     echo("</div>");
                                     echo("</div>");
