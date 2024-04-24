@@ -54,10 +54,10 @@
                 while($account = $results -> fetch_object()){
                     {
                         var_dump($amount);
-                        $amount=$amount*$account->exchange_rate;
+                        $amountconv=$amount*$account->exchange_rate;
                         var_dump($amount);
                         var_dump($accountId);
-                        $stmnt=$mysqli->prepare("UPDATE `currency_accounts` SET balance = balance+{$amount} WHERE currency_account_id = ?");
+                        $stmnt=$mysqli->prepare("UPDATE `currency_accounts` SET balance = balance+{$amountconv} WHERE currency_account_id = ?");
                         $stmnt->bind_param('s',$accountId);
                         $stmnt->execute();
                         }

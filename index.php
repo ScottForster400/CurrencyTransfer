@@ -1,3 +1,13 @@
+<?php
+    require_once("includes/dbconfing-inc.php");
+    $selection = array("","","");
+    for ($i = 0; $i < 3; $i++) {
+        $selection[$i] = rand(18,42);
+    }
+    $stmnt=$mysqli->prepare("SELECT * FROM exchange_rates WHERE exchange_id IN ('$selection[0]',$selection[1],$selection[2]); ");
+    $stmnt->execute();
+    $results=$stmnt->get_result();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +33,29 @@
         
         <div class="info">
                 <h2>Popular Exchanges</h2>
-                <div class="exchange-display">
+
+                <?php
+                     if($results->num_rows>0){
+                        while($currency = $results -> fetch_object()){
+                            {
+                                echo("<div class=\"exchange-display\">");
+                                echo("<div class=\"exchange-image\">");
+                                echo("<div class=\"img-container\">");
+                                echo("<img src=\"imgs/$currency->currency_image\" alt=\"$currency->currency_name\">");
+                                echo("</div>");
+                                echo("</div>");
+                                echo("<div class=\"exchange-info\">");
+                                echo("<div class=\"balance\">");
+                                echo("<h2>$currency->currency_name</h2>");
+                                echo("<P>$currency->exchange_rate</P>");
+                                echo("</div>");
+                                echo("</div>");
+                                echo("</div>");
+                            }
+                        }
+                    }
+                ?>
+                <!-- <div class="exchange-display">
                     <div class="exchange-image">
                         <div class="img-container">
                             <img src="imgs/Euro.png" alt="euro">
@@ -61,7 +93,7 @@
                             <P>1.26</P>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
         </div>
         <?php
