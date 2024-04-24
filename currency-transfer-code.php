@@ -7,6 +7,7 @@
         $accountTo=$_GET["account-to"]??null;
         $limit=$_GET["limit"]?? null;
 
+        //checks if account is approved
         $stmnt=$mysqli->prepare("SELECT approved_account FROM user_accounts WHERE user_id = ?;");
         $stmnt->bind_param('s',$user);
         $stmnt->execute();
@@ -19,6 +20,7 @@
             }
         }
 
+        //Gets balance of selected account
         $stmnt=$mysqli->prepare("SELECT * FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = ? AND currency_name =?;");
         $stmnt->bind_param('ss',$user,$accountFrom);
         $stmnt->execute();
@@ -33,7 +35,7 @@
             }
         }
         
-
+        //gets id of account to
         $stmnt=$mysqli->prepare("SELECT * FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = ? AND currency_name =?;");
         $stmnt->bind_param('ss',$user,$accountTo);
         $stmnt->execute();
@@ -46,6 +48,7 @@
             }
         }
 
+        //checks if amoubt is over limit
         if($amount>= $limit){
             $stmnt=$mysqli->prepare("UPDATE user_accounts SET suspicious_account = 1 WHERE user_id=?;");
             $stmnt->bind_param('s',$user);
@@ -54,6 +57,7 @@
             $stmnt->execute();
             header('Location:login.php?user=');
         }
+        //checks if amount is over 100000 and not approved
         elseif($amount>100000 and $approved == 0){
             $stmnt=$mysqli->prepare("UPDATE user_accounts SET suspicious_account = 1 WHERE user_id=?;");
             $stmnt->bind_param('s',$user);
@@ -62,10 +66,12 @@
             $stmnt->execute();
             header('Location:login.php?user=');
         }
+        //sees if they have balance in accout
         elseif($balance<$amount){
             $data='1';
             header("Location:transfer.php?user=$user & data=$data");
         }
+        //transfers currency between accounts has to convert to punds then selected account as all rates are from pound to selected country
         else{
             $stmnt=$mysqli->prepare("SELECT * FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = '$user' AND currency_name ='$accountFrom' ;");
             $stmnt->execute();
@@ -99,6 +105,7 @@
                         }
                     }
                 }
+                //stores transfer
                 $stmnt=$mysqli->prepare("INSERT INTO `transfers` ( `transfer_date`,`transfer_amount`,`account_from`,`account_to`, `user_id`) VALUES ('$date', '$amount','$accountFromId','$accountToId', '$user');");
                 $stmnt->execute();
                 header('Location:account-home.php?user='.$user);

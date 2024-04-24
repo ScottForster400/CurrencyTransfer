@@ -5,6 +5,7 @@
     $stmnt=$mysqli->prepare("SELECT * FROM `currency_accounts` INNER JOIN exchange_rates ON currency_accounts.exchange_id = exchange_rates.exchange_id WHERE user_id = '$user' AND currency_accounts.exchange_id ='$account_id' ;");
     $stmnt->execute();
     $results=$stmnt->get_result();
+    //adds money back to pound account if deleted account still has money in
     if($results->num_rows>0){
         while($account = $results -> fetch_object()){
             {

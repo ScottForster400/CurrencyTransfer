@@ -13,10 +13,13 @@
 
 $crawler = $client->request("GET","https://www.bankofengland.co.uk/boeapps/database/Rates.asp?Travel=NIxAZx&into=GBP");
 
+
 $tableString = $crawler->filter('table')->text();
+//seperates string into array
 $tableArray=explode(' ', $tableString);
 echo count($tableArray);
 array_splice($tableArray,0,11);
+//checks ascii values of the satrt of each entry to see if its still the currency name or chnaged to exchnage rate
 for ($i = 0; $i < count($tableArray); $i++){
     if(ord($tableArray[$i])>57){
         if(ord($tableArray[$i+1])> 57){

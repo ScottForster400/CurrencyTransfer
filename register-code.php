@@ -9,7 +9,7 @@
 
     $hashed_password = password_hash($pword, PASSWORD_DEFAULT);
 
-
+    //checks if email exists in system
     $stmnt=$mysqli->prepare("SELECT * FROM user_accounts WHERE email ='$email'");
     $stmnt->execute();
     $results=$stmnt->get_result();
