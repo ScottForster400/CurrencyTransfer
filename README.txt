@@ -1,0 +1,2 @@
+composer, composer lock and all files in vendor for webscraper - i didnt write these however they neeeded to beinstalled for web-scraper to work
+jquery-3.7.1.min - i didnt write, installed so that jquery can work

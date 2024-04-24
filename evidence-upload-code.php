@@ -10,7 +10,7 @@ $user=$_POST["user"]??null;
  $imgname=$_FILES['evidence']['name'];
  var_dump($imgname);
  $extension= pathinfo($imgname,PATHINFO_EXTENSION);
-
+//changes name of the image file
  $randnum=rand(0,1000000);
  $rename='Evidence'.date('Ymd').$randnum;
  $newname=$rename.'.'.$extension;
